@@ -1,8 +1,8 @@
 CREATE DATABASE vet_clinic
 
 CREATE TABLE animals(
-	id integer PRIMARY KEY,
-	name INTEGER NOT NULL,
+	id SERIAL PRIMARY KEY,
+	name VARCHAR NOT NULL,
 	date_of_birth DATE NOT NULL,
 	escape_attempts INTEGER NOT NULL,
 	neutered BOOLEAN NOT NULL,
