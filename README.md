@@ -59,9 +59,8 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 [vet_clinic] <a name="about-project"></a>
 
-> This is an SQL database that store information for a vet clinic. 
 
-**[your_project__name]** is a...
+**[vet_clinic]** is a an SQL database that store information for a vet clinic.
 
 ## 🛠 Built With <a name="built-with"></a>
 
