@@ -24,9 +24,10 @@ WHERE weight_kg BETWEEN 10.4 AND 17.3
 
 BEGIN TRANSACTION;
 UPDATE animals SET species = 'unspecified';
-COMMIT;
+SELECT * FROM animals;
 
 ROLLBACK;
+SELECT * FROM animals;
 
 BEGIN TRANSACTION;
 
@@ -34,23 +35,28 @@ UPDATE animals
 SET species = 'digimon'
 WHERE name LIKE '%mon';
 
+SELECT * FROM animals;
+
 UPDATE animals
 SET species = 'pokemon'
 WHERE species IS NULL;
 
 COMMIT;
-
+SELECT * FROM animals;
 -- Changes happend in the database
 
 
 
 BEGIN TRANSACTION;
 DELETE FROM animals
-COMMIT;
+SELECT COUNT(*) FROM ANIMALS;
 
 -- Deleted all the animals
 
 ROLLBACK;
+
+SELECT COUNT(*) FROM ANIMALS;
+
 
 BEGIN TRANSACTION;
 

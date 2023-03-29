@@ -49,4 +49,4 @@ INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts) 
 
 INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts) VALUES ('Blossom', '1998-10-13', 17, 'yes', 3);
 
-INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts) VALUES ('Ditto', '2022-05-14', 22, 'yes', 4);
+INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts) VALUES ('Ditto', '2022-05-14', 22, 'yes', 4)
