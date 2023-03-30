@@ -49,4 +49,40 @@ INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts) 
 
 INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts) VALUES ('Blossom', '1998-10-13', 17, 'yes', 3);
 
-INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts) VALUES ('Ditto', '2022-05-14', 22, 'yes', 4)
+INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts) VALUES ('Ditto', '2022-05-14', 22, 'yes', 4);
+
+INSERT INTO owners(full_name, age)
+VALUES  ('Sam Smith',34 ), 
+		('Jennifer Orwell', 19),
+		('Bob', 45),
+		('Melody Pond', 77),
+		('Dean Winchester', 14),
+		('Jodie Whittaker', 38)
+
+INSERT INTO species(name)
+VALUES  ('Pokemon' ), 
+		('Digimon')
+
+
+UPDATE animals
+SET species_id =
+CASE 
+	WHEN name ILIKE '%mon' THEN(SELECT id FROM species WHERE name = 'Digimon')
+	ELSE (SELECT id FROM species WHERE name = 'Pokemon')
+END;
+
+
+UPDATE animals SET owner_id = (
+    CASE 
+        WHEN name ILIKE '%Agumon' THEN (SELECT id FROM owners WHERE full_name = 'Sam Smith')
+        WHEN name ILIKE '%Gabumon' OR name ILIKE '%Pikachu' THEN (SELECT id FROM owners WHERE full_name = 'Jennifer Orwell')
+        WHEN name ILIKE '%Devimon' OR name ILIKE '%Plantmon' THEN (SELECT id FROM owners WHERE full_name = 'Bob')
+        WHEN name ILIKE '%Charmander' OR name ILIKE '%Squirtle' OR name ILIKE '%Blossom' THEN (SELECT id FROM owners WHERE full_name = 'Melody Pond')
+        WHEN name ILIKE '%Angemon' OR name ILIKE '%Boarmon' THEN (SELECT id FROM owners WHERE full_name = 'Dean Winchester')
+    END
+);
+
+
+
+
+
