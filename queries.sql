@@ -133,3 +133,5 @@ ON owners.id = animals.owner_id
 GROUP BY owners.id
 ORDER BY num_animals DESC
 LIMIT 1;
+
+
