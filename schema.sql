@@ -27,4 +27,11 @@ ADD COLUMN owner_id INTEGER REFERENCES owners(id),
 ADD COLUMN species_id INTEGER REFERENCES species(id),
 DROP COLUMN species
 
-Id is already a primary key and its auto increament. So don't need to add it again.
+-- Id is already a primary key and its auto increament. So don't need to add it again.
+
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+CREATE INDEX animal_index ON visits(animal_id);
+CREATE INDEX vet_index ON visits(vet_id);
+
+
