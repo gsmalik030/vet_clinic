@@ -171,6 +171,8 @@ Example:
 <!-- AUTHORS -->
 
 ## 👥 Author <a name="authors"></a>
+- GitHub: [@githubhandle](https://github.com/becky449)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/rabecca_nabwire/)
 
 👤 **Ghulam Subbhani(Malik)**
 
